@@ -7,13 +7,24 @@
     <meta name="keywords" content="Gerador de senhas, password generator">
     <link rel="stylesheet" href="style.css">
     <title>Gerador de senha</title>
-    
-    
+
+
 </head>
 
 <body>
     <script src="script.js"></script>
+    <img src="./assets/logo.png" alt="Gerador de senha Logo" class="logo">
 
+    <main class="container-input">
+        <span>Tamanho <span id="valor"></span>caracteres</span>
+        <input type="range" id="slider" class="slider" min="5" max="25" value="8" />
+        <button class="button-cta" id="button">Gerar senha</button>
+    </main>
+    <div class="container-password ide" id="container-password">
+        <span class="title">Sua senha gerada foi:</span>
+        <span class="password" id="password">123123123123</span>
+        <span class="tooltip">Clique na senha para copiar.</span>
+    </div>
 </body>
 
 </html>
