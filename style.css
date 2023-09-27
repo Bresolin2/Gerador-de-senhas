@@ -81,7 +81,7 @@ body {
     height: 60px;
     background-color: rgba(0, 0, 0, 0.40);
     border-radius: 4px;
-    border: 1´x solid #313131;
+    border: 1px solid #313131;
     display: flex;
     justify-content: center;
     align-items: center;
