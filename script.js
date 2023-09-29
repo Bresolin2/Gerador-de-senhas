@@ -11,7 +11,7 @@ let charset = "";
 let charsetNumbers = "0123456789";
 let charsetLetters = "abcdefghijklmnopqrstuvwxyz";
 let charsetLettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let charsetSymbols = "!@#$%*|(){}[]/+-_";
+let charsetSymbols = "!@#$%*|(){}[]/\\+-_";
 let novaSenha = "";
 
 
