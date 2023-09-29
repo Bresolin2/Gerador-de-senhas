@@ -6,7 +6,7 @@ let password = document.querySelector("#password");
 
 let containerPassoword = document.querySelector("#container-password");
 
-let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*";
+let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*|(){}[]/?;:.,<>~`^'+-_";
 let novaSenha = "";
 
 sizePassword.innerHTML = sliderElement.value;
@@ -19,13 +19,9 @@ function generatePassword() {
     let pass = "";
 
     for(let i = 0, n = charset.length; i < sliderElement.value; ++i) {
-        pass += charset.charAt(Math.floor(Math.random() * n)); 
+        pass += charset.charAt(Math.floor(Math.random() * n));
     } 
 
-    containerPassoword.classList.remove("hide");
+    containerPassword.classList.remove("hide");
     password.innerHTML = pass;
-}function add(a, b) {
-    return a + b;
-}
-
-let result = add(2, 3); // result will be 5
+};
