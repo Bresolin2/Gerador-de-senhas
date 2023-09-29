@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Gerador de senhas, password generator">
-    <link rel="stylesheet" href="style.css">
-    <title>Gerador de senha</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Gerador de senhas, password generator">
+        <link rel="stylesheet" href="style.css">
+        <title>Gerador de senha</title>
 
+    </head>
 
-</head>
+    <body>
 
-<body>
+        <img src="./assets/logo.png" alt="Gerador de senha Logo" class="logo">
 
-    <img src="./assets/logo.png" alt="Gerador de senha Logo" class="logo">
+        <main class="container-input">
+            <span>Tamanho <span id="valor"></span> caracteres</span>
+            <input type="range" id="slider" class="slider" min="5" max="25"
+                value="8" />
+            <span class="title">Selecione os caracteres que deseja usar:</span>
 
-    <main class="container-input">
-        <span>Tamanho <span id="valor"></span> caracteres</span>
-        <input type="range" id="slider" class="slider" min="5" max="25" value="8" />
-        <span class="title">Selecione os caracteres que deseja usar:</span>
+            <div class="container-checkbox" id="container-checkbox">
+                <input type="checkbox" id="lowercase" class="checkbox" checked>
+                <label for="lowercase">Minúsculas</label>
+                <input type="checkbox" id="uppercase" class="checkbox" checked>
+                <label for="uppercase">Maiúsculas</label>
+                <input type="checkbox" id="numbers" class="checkbox" checked>
+                <label for="numbers">Números</label>
+                <input type="checkbox" id="symbols" class="checkbox" checked>
+                <label for="symbols">Símbolos</label>
+            </div>
 
-        <div class="container-checkbox" id="container-checkbox">
-            <input type="checkbox" id="lowercase" class="checkbox" checked>
-            <label for="lowercase">Minúsculas</label>
-            <input type="checkbox" id="uppercase" class="checkbox" checked>
-            <label for="uppercase">Maiúsculas</label>
-            <input type="checkbox" id="numbers" class="checkbox" checked>
-            <label for="numbers">Números</label>
-            <input type="checkbox" id="symbols" class="checkbox" checked>
-            <label for="symbols">Símbolos</label>
+            <button id="button" class="button-cta" onclick="generatePassword()">Gerar
+                senha</button>
+        </main>
+
+        <div id="container-password" class="container-password hide">
+            <span class="title">Sua senha gerada foi:</span>
+            <span id="password" class="password"></span>
+            <span class="tooltip">Clique na senha para copiar.</span>
         </div>
 
-        <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
-    </main>
-
-    <div id="container-password" class="container-password hide">
-        <span class="title">Sua senha gerada foi:</span>
-        <span id="password" class="password"></span>
-        <span class="tooltip">Clique na senha para copiar.</span>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 
 </html>
