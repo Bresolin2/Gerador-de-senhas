@@ -48,3 +48,13 @@ function generatePassword() {
     password.innerHTML = pass;
 
 }
+
+function copyPassword() {
+    let textarea = document.createElement("textarea");
+    textarea.value = password.innerHTML;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+    alert("Senha copiada!");
+}
