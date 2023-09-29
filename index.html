@@ -12,12 +12,24 @@
 </head>
 
 <body>
-    
+
     <img src="./assets/logo.png" alt="Gerador de senha Logo" class="logo">
 
     <main class="container-input">
         <span>Tamanho <span id="valor"></span> caracteres</span>
         <input type="range" id="slider" class="slider" min="5" max="25" value="8" />
+        <span class="title">Selecione os caracteres que deseja usar:</span>
+
+        <div class="container-checkbox" id="container-checkbox">
+            <input type="checkbox" id="lowercase" class="checkbox" checked>
+            <label for="lowercase">Minúsculas</label>
+            <input type="checkbox" id="uppercase" class="checkbox" checked>
+            <label for="uppercase">Maiúsculas</label>
+            <input type="checkbox" id="numbers" class="checkbox" checked>
+            <label for="numbers">Números</label>
+            <input type="checkbox" id="symbols" class="checkbox" checked>
+            <label for="symbols">Símbolos</label>
+        </div>
 
         <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
     </main>
