@@ -6,7 +6,6 @@ let password = document.querySelector("#password");
 
 let containerPassword = document.querySelector("#container-password");
 
-// let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%*|(){}[]/+-_";
 let charset = "";
 let charsetNumbers = "0123456789";
 let charsetLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -24,22 +23,28 @@ slider.oninput = function () {
 function generatePassword() {
     let pass = "";
     let charset = "";
-    
+
     if (document.querySelector("#numbers").checked) {
         charset += charsetNumbers;
     }
-    
+
     if (document.querySelector("#lowercase").checked) {
         charset += charsetLetters;
     }
-    
+
     if (document.querySelector("#uppercase").checked) {
         charset += charsetLettersUpper;
     }
-    
+
     if (document.querySelector("#symbols").checked) {
         charset += charsetSymbols;
     }
+
+    if (charset == "") {
+        alert("Selecione pelo menos uma opção!");
+        return;
+    }
+
     for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
         pass += charset.charAt(Math.floor(Math.random() * n));
     }
@@ -58,3 +63,4 @@ function copyPassword() {
     textarea.remove();
     alert("Senha copiada!");
 }
+
